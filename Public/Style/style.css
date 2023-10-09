@@ -1,0 +1,91 @@
+.gradient-background {
+    background: linear-gradient(300deg, #ec7e7e, #f0a37a, #f1d387, #eef1a8);
+    background-size: 180%, 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+
+.butnn{
+    margin-right: 30px;
+  }
+
+.body{
+    background-color: #f0a37a;
+  }
+
+.flex-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+.dateinfo{
+    font-size: 18;
+    font-weight: bold;
+    font-style: italic;
+    color:brown;
+    background-color: bisque;
+    margin-top: 5%;
+    width: 100vh;
+}
+
+#textbox{
+  width: 700px;
+  height: 40px;
+}
+
+.butn{
+  height: 40px;
+  width: 108px;
+}
+
+.strikethrough{
+  
+  width: 1.5em;
+  height: 1.5em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  outline: none;
+  cursor: pointer;
+ 
+}
+
+.box{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+.item{
+  border: 1px solid bisque;
+  width:100vh;
+  text-align: left;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.p{
+  color: white;
+  font-size: x-large;
+ padding-left: 20px;
+}
+
+input[type=checkbox]:checked + .p{
+  text-decoration: line-through;
+  color: red;
+
+}
+
+input[type=checkbox]:checked{
+  content: '✔';
+}
+

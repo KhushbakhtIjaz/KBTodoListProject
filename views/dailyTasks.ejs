@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dailytaskList</title>
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body class="body ">
+    <div class="flex-container">
+       <% const d = new Date(); %>
+        <h1 class="dateinfo"> Welcome! <br/> Today is <%= d %></h1>
+         <form action = "/dailyTasks.ejs" method="post">
+         <input id= "textbox" name = "newItem" type="text" placeholder="Add Task Here" />    
+         <button class="butn" type="submit">➕</button> 
+        </form>
+
+        <% for(var x=0; x<IV.length; x++){ %>
+        <form action="/deletedailytask" method="post">
+        <div class = "box">
+            <div class="item">
+                <input id="cb" type="checkbox" name="checkbox" value="<%=IV[x]._id%>" onChange="this.form.submit()" style="float: left; margin-top: 5px;" class="strikethrough">
+                <div class = "p" style="margin-left: 25px;">
+                    <%= IV[x].Taskname%> 
+               </div>
+            </div>
+        </div>
+        </form>
+   <% } %>
+  
+    <a href="./index.ejs"><button style="margin-top: 20px; height: 50px; width: 100px;">Go back</button> </a>
+    </div>
+</body>
+</html>
